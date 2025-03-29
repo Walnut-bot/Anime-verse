@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naruto - Saison 1 | ANIME SENSEI - Streaming et Scancs</title> 
+    <link rel="icon" type="image/png" href="images/favicon.ico"> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dokdo&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet"  href="naruto.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html" onclick="location.reload()" ; ><img src="images\Logo Anime sensei 3.jpg" alt="Logo"></a></img>
+            <h1>ANIME SENSEI</h1>
+        </div>
+        <div class="search-bar">
+            <button><i class="fas fa-search"></i></button>
+            <input type="text" id="recherche" placeholder="Rechercher...">
+        </div>
+        <div class="menu">
+            <a href="index.html" onclick="location.reload();">Accueil</a>
+            <a href="anime.html">Catalogue</a>
+            <a href="#">Scans</a>
+            <a href="#">Films</a>
+            <a href="#">PLANNING</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Titre -->
+        <h1 class="anime-title text-center">Naruto</h1>
+
+        <!-- Conteneur principal -->
+        <div class="anime-container">
+            <!-- Image de Naruto -->
+            <div class="anime-image">
+                <img src="images/naruto.jpg" alt="Naruto">
+            </div>
+
+            <!-- Informations principales -->
+            <div class="anime-info">
+                <div class="info-box"><strong>Alternative :</strong> ナルト</div>
+                <div class="info-box"><strong>Auteur(s) :</strong> Masashi Kishimoto</div>
+                <div class="info-box"><strong>Genre(s) :</strong> Action, Aventure, Shonen</div>
+                <div class="info-box"><strong>Statut :</strong> Terminé</div>
+                <div class="info-box"><strong>Sortie :</strong> 2002</div>
+            </div>
+        </div>
+
+        <!-- Synopsis -->
+        <div class="synopsis">
+            <h2>Synopsis</h2>
+            <p>
+                Naruto Uzumaki est un jeune ninja rêveur qui souhaite devenir Hokage, le plus grand ninja du village.
+                Cependant, il est rejeté par les habitants à cause du démon renard à neuf queues scellé en lui...
+            </p>
+        </div>
+
+        <!-- Boutons "Regarder" -->
+        <div class="watch-buttons">
+            <button class="btn btn-primary">▶️ Regarder le 1er Ep</button>
+            <button class="btn btn-secondary">▶️ Regarder le Dernier Ep</button>
+        </div>
+    </div>
+
+            <!-- CARROUSEL LISTE DES ÉPISODES -->
+            <div class="episode-container">
+                <h2 class="episode-title">📺 Liste des Épisodes</h2>
+    
+                <div class="episode-list" id="episodeList">
+                    <!-- Épisodes générés par JavaScript -->
+                </div>
+    
+                <!-- Bouton pour afficher plus d'épisodes -->
+                <button class="btn btn-show-more" id="showMoreBtn">Montrer Plus</button>
+            </div>
+    
+        </div>
+    
+        <script>
+            $(document).ready(function () {
+                let totalEpisodes = 220; // Nombre total d'épisodes
+                let visibleEpisodes = 10; // Nombre d'épisodes visibles au début
+    
+                function loadEpisodes(limit) {
+                    $("#episodeList").empty();
+                    for (let i = 1; i <= limit; i++) {
+                        $("#episodeList").append(`<div class="episode-box">Épisode ${i}</div>`);
+                    }
+                }
+    
+                loadEpisodes(visibleEpisodes);
+    
+                $("#showMoreBtn").click(function () {
+                    if (visibleEpisodes < totalEpisodes) {
+                        visibleEpisodes += 10;
+                        if (visibleEpisodes >= totalEpisodes) {
+                            visibleEpisodes = totalEpisodes;
+                            $("#showMoreBtn").hide();
+                        }
+                        loadEpisodes(visibleEpisodes);
+                    }
+                });
+            });
+        </script>
+</body>
+</html>

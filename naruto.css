@@ -1,0 +1,209 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #4b4747;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    border-bottom: 2px solid rgb(55, 0, 255);
+}
+
+@media (max-width: 768px) {
+.navbar {
+    padding: none;
+}
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: left;
+    background-color: #000000;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.search-bar button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 20px;
+    text-align: left;
+}
+
+.search-bar input {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 16px;
+    width: 200px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px;
+    margin-right: 10px;
+}
+
+.logo h1 {
+    font-size: 25px;
+    margin: 0;
+    align-items: center;
+    color:#ffffff;
+    
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+} 
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    padding: 5px;
+}
+
+/* Style pour la section de recherche */
+
+/* Conteneur principal */
+.container {
+    max-width: 800px;
+    margin-top: 65px; /* Ajuster la marge supérieure pour éviter le chevauchement avec la barre de navigation */
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Titre */
+.anime-title {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+/* Conteneur principal (image + infos) */
+.anime-container {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+/* Image */
+.anime-image img {
+    width: 200px;
+    border-radius: 10px;
+}
+
+/* Infos */
+.anime-info {
+    flex: 1;
+}
+
+.info-box {
+    background-color: #333;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Synopsis */
+.synopsis {
+    margin-top: 20px;
+}
+
+.synopsis h2 {
+    font-size: 22px;
+    border-bottom: 2px solid #555;
+    padding-bottom: 5px;
+}
+
+.synopsis p {
+    font-size: 16px;
+    text-align: justify;
+}
+
+/* Boutons */
+.watch-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.watch-buttons .btn {
+    width: 48%;
+    padding: 10px;
+    font-size: 16px;
+}
+
+/* Conteneur des épisodes */
+.episode-container {
+    margin-top: 30px;
+    background-color: #222;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+/* Titre de la liste des épisodes */
+.episode-title {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+/* Liste des épisodes */
+.episode-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+/* Style des cases d'épisodes */
+.episode-box {
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.episode-box:hover {
+    background-color: #444;
+}
+
+/* Bouton "Montrer Plus" */
+.btn-show-more {
+    margin-top: 15px;
+    width: 10%;
+    padding: 10px;
+    background-color: #444;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-show-more:hover {
+    background-color: #555;
+}

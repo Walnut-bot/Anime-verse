@@ -1,0 +1,213 @@
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #4b4747;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            width: 100%;
+            background-color: black;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+            border-bottom: 2px solid rgb(55, 0, 255);
+       }
+       
+       @media (max-width: 768px) {
+       .navbar {
+            padding: none;
+        }
+        }
+
+        h1 {
+            margin-bottom: 10px;
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: left;
+            background-color: #000000;
+            border-radius: 5px;
+            padding: 5px;
+        }
+
+        .search-bar button {
+            background-color: transparent;
+            border: none;
+            color: white;
+            font-size: 20px;
+            text-align: left;
+        }
+
+        .search-bar input {
+            background-color: transparent;
+            border: none;
+            color: white;
+            font-size: 16px;
+            width: 200px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 50px;
+            margin-right: 10px;
+        }
+
+        .logo h1 {
+            font-size: 25px;
+            margin: 0;
+            align-items: center;
+            color:#ffffff;
+            
+        }
+
+        .menu {
+            display: flex;
+            gap: 20px;
+        } 
+
+        .menu a {
+            color: white;
+            text-decoration: none;
+            padding: 5px;
+        }  
+        
+        /* Style de la page d'accueil */
+
+        .carousel-container {
+            max-width: 100%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+            background-color: rgb(0, 0, 0);
+        }
+        
+        h2 {
+            text-align: left;
+            margin-left: 10px;
+            margin-top: calc(100px + 20px);
+            font-size: 20px;
+        }
+        
+        .carousel {
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+        
+        .carousel-track {
+            display: flex;
+            gap: 15px;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            scrollbar-width: none; /* Masquer la barre de défilement */
+        }
+        
+        .carousel-track::-webkit-scrollbar {
+            display: none;
+        }
+        
+        .anime-card {
+            display: flex;
+            background: #1b1b1b;
+            border-radius: 10px;
+            padding: 10px;
+            min-width: 300px;
+            max-width: 300px;
+            align-items: center;
+        }
+        
+        .anime-card img {
+            width: 100px;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        .anime-info {
+            text-align: left;
+            margin-left: 10px;
+        }
+        
+        .anime-info h3 {
+            font-size: 16px;
+            margin: 0;
+        }
+        
+        .anime-info p {
+            font-size: 12px;
+            margin: 2px 0;
+            opacity: 0.8;
+        }
+        
+        button {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            padding: 10px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 2;
+        }
+        
+        .prev {
+            left: -30px;
+        }
+        
+        .next {
+            right: -30px;
+        }
+
+        /* Style du footer*/
+        
+        .site-footer {
+            background-color: #1a1a1a; /* Couleur de fond du footer */
+            color: #ffffff; /* Couleur du texte */
+            padding: 20px 0;
+            text-align: center;
+            border-bottom: 2px solid rgb(55, 0, 255);
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap; /* Permet aux sections de passer à la ligne sur les petits écrans */
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .footer-section {
+            flex: 1;
+            margin: 10px;
+            min-width: 250px; /* Largeur minimale des sections */
+        }
+        
+        .footer-section h3 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        
+        .footer-section p {
+            font-size: 0.9em;
+            line-height: 1.6;
+        }
+        
+        .footer-bottom {
+            margin-top: 20px;
+            padding-top: 10px;
+            border-top: 1px solid #333; /* Séparateur */
+        }
